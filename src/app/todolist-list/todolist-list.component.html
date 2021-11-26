@@ -1,0 +1,23 @@
+<div class="alert alert-danger" role="alert" *ngIf="errorMessage">
+  {{errorMessage}}
+</div>
+<button type="button" class="btn btn-success addBtn" (click)="add()"><i class="fas fa-plus"></i> Add new category</button>
+<table class="table" *ngIf="todolists && todolists.length > 0">
+  <thead>
+      <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Actions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let todolist of todolists">
+          <th scope="row">{{todolist.id}}</th>
+          <td>{{todolist.name}}</td>
+          <td>
+              <button type="button" class="btn btn-success" (click)="edit(todolist.id)"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger" (click)="delete(todolist.id)"><i class="far fa-trash-alt"></i></button>
+          </td>
+      </tr>
+  </tbody>
+</table>

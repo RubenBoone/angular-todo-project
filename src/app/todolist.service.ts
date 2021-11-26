@@ -16,7 +16,7 @@ export class TodolistService {
   }
 
   getTodoListById(id: number): Observable<TodoList> {
-    return this.httpClient.get<TodoList>("http://localhost:3000/lists/" + id);
+    return this.httpClient.get<TodoList>("http://localhost:3000/lists/" + id + "?_embed=items");
   }
 
   postTodoList(todolist: TodoList): Observable<TodoList> {

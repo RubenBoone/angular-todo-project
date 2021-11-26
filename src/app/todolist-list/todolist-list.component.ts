@@ -1,29 +1,25 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
-import { Item } from '../item';
-import { TodoList } from '../todolist';
-import { Observable, Subscription } from 'rxjs';
-import { TodolistService } from '../todolist.service';
-import { Router } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {TodoList} from '../todolist';
+import {TodolistService} from '../todolist.service';
+import {Observable, Subscription} from 'rxjs';
 
 @Component({
-  selector: 'app-todolist',
-  templateUrl: './todolist.component.html',
-  styleUrls: ['./todolist.component.scss']
+  selector: 'app-todolist-list',
+  templateUrl: './todolist-list.component.html',
+  styleUrls: ['./todolist-list.component.scss']
 })
-export class TodolistComponent implements OnInit, OnDestroy {
+export class TodolistListComponent implements OnInit, OnDestroy {
   todolists: TodoList[] = [];
   todolists$: Subscription = new Subscription();
   deleteTodoLists$: Subscription = new Subscription();
 
   errorMessage: string = '';
-  items: Array<Item> = []
-  @Input() todolist: TodoList = {id: 0, name: "", category: "", items: []}
 
   constructor(private todolistService: TodolistService, private router: Router) {
-    this.items = this.todolist.items;
-   }
+  }
 
-   ngOnInit(): void {
+  ngOnInit(): void {
     this.getTodoLists();
   }
 
@@ -46,20 +42,12 @@ export class TodolistComponent implements OnInit, OnDestroy {
     this.deleteTodoLists$ = this.todolistService.deleteTodoList(id).subscribe(result => {
       //all went well
       this.todolistService.getTodoLists();
-      this.refresh();
     }, error => {
       //error
       this.errorMessage = error.message;
     });
   }
 
-  refresh(): void {
-    window.location.reload();
- }
-
- detail(id: number){
-   this.router.navigate(['/list', id])
- }
   getTodoLists() {
     this.todolists$ = this.todolistService.getTodoLists().subscribe(result => this.todolists = result);
   }

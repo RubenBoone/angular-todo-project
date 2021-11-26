@@ -9,13 +9,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { TodolistFormComponent } from './todolist-form/todolist-form.component';
+import { TodolistDetailComponent } from './todolist-detail/todolist-detail.component';
+import { ItemFormComponent } from './item-form/item-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodolistComponent,
     HomeComponent,
-    TodolistFormComponent
+    TodolistFormComponent,
+    TodolistDetailComponent,
+    ItemFormComponent
   ],
   imports: [
     BrowserModule,

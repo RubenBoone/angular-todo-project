@@ -1,4 +1,4 @@
-<div class="card m-3 text-center " style="width: 100%;">
+<div class="card m-3 text-center " style="width: 100%;" (click)="detail(todolist.id)">
   <div class="card-header font-weight-bold row justify-content-between m-0" [style.background]="todolist.category">
        <div>
           {{todolist.name}}
