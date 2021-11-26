@@ -1,0 +1,14 @@
+<div class="card m-3 text-center " style="width: 100%;">
+  <div class="card-header font-weight-bold row justify-content-between m-0" [style.background]="todolist.category">
+       <div>
+          {{todolist.name}}
+        </div>
+        <div>
+          <i class="fas fa-edit mx-1" (click)="edit(todolist.id)"></i> |
+          <i class="far fa-trash-alt mx-1" (click)="delete(todolist.id)"></i>
+      </div>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let item of todolist.items" >{{item.title}} - {{item.date | date:'shortDate'}}</li>
+  </ul>
+</div>

@@ -1,0 +1,58 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "name": "testedit",
+      "category": "red"
+    },
+    {
+      "id": 2,
+      "name": "test2",
+      "category": "blue"
+    },
+    {
+      "id": 3,
+      "name": "testertje",
+      "category": "#b313c9"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "listId": 1,
+      "title": "Cisco assignment",
+      "description": "Chapter test 2",
+      "date": "2021-10-30T22:00:00.000Z",
+      "statusId": 1,
+      "order": 1
+    },
+    {
+      "id": 2,
+      "listId": 2,
+      "title": "Cleaning",
+      "description": "The windows need some cleaning",
+      "date": "2021-10-26T22:00:00.000Z",
+      "statusId": 1,
+      "order": 1
+    },
+    {
+      "id": 3,
+      "listId": 1,
+      "title": "Mobile Development",
+      "description": "Deadline to upload project description and team",
+      "date": "2021-10-24T22:00:00.000Z",
+      "statusId": 1,
+      "order": 2
+    }
+  ],
+  "statuses": [
+    {
+      "id": 1,
+      "name": "ongoing"
+    },
+    {
+      "id": 2,
+      "name": "done"
+    }
+  ]
+}

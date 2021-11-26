@@ -1,0 +1,9 @@
+<div class="text-center justify-content-center">
+  <h1 >Todo Lists:</h1>
+  <div class="row justify-content-center">
+    <button type="button" class="btn btn-success addBtn" (click)="add()"><i class="fas fa-plus"></i> Add new Todo list</button>
+  </div>
+  <div class="row justify-content-center">
+    <app-todolist class="col-md-6" *ngFor="let todolist of (todolists$ | async)" [todolist]="todolist"></app-todolist>
+  </div>
+</div>
