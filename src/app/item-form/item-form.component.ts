@@ -60,6 +60,7 @@ export class ItemFormComponent implements OnInit, OnDestroy {
     this.isSubmitted = true;
     if (this.isAdd) {
       this.item.listId = this.listId;
+      this.item.statusId = this.selectedOption;
       this.postItem$ = this.itemService.postItem(this.item).subscribe(result => {
                 //all went well
                 this.router.navigateByUrl("/list/" + this.listId);

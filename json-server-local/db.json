@@ -2,7 +2,7 @@
   "lists": [
     {
       "id": 1,
-      "name": "testedit",
+      "name": "School assignments",
       "category": "#e2b512",
       "items": [
         {
@@ -20,14 +20,14 @@
           "title": "Mobile Development",
           "description": "Deadline to upload project description and team",
           "date": "2021-10-24T22:00:00",
-          "statusId": "3",
+          "statusId": "4",
           "order": 2
         }
       ]
     },
     {
       "id": 2,
-      "name": "test2",
+      "name": "Chores",
       "category": "#073ddf",
       "items": [
         {
@@ -35,7 +35,7 @@
           "listId": 2,
           "title": "Cleaning",
           "description": "The windows need some cleaning",
-          "date": "2021-10-26T22:00:00.000Z",
+          "date": "2021-10-26T22:00:00",
           "statusId": 1,
           "order": 1
         }
@@ -43,7 +43,7 @@
     },
     {
       "id": 3,
-      "name": "testertje",
+      "name": "Mobile Development Project",
       "category": "#b313c9",
       "items": []
     }
@@ -73,8 +73,26 @@
       "title": "Mobile Development",
       "description": "Deadline to upload project description and team",
       "date": "2021-10-24T22:00:00",
-      "statusId": "3",
+      "statusId": "4",
       "order": 2
+    },
+    {
+      "id": 4,
+      "listId": 3,
+      "title": "Create cards",
+      "description": "Create the cars for scanning and shwoing the 3D models",
+      "date": "2021-10-30T16:00",
+      "statusId": "4",
+      "order": 0
+    },
+    {
+      "id": 5,
+      "listId": 3,
+      "title": "Upload Project",
+      "description": "uload the project to canvs",
+      "date": "2021-10-30T20:00",
+      "statusId": "4",
+      "order": 0
     }
   ],
   "statuses": [

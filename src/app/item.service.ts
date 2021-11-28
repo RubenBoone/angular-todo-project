@@ -11,6 +11,7 @@ export class ItemService {
   constructor(private httpClient: HttpClient) {
   }
 
+
   getItems(): Observable<Item[]> {
     return this.httpClient.get<Item[]>("http://localhost:3000/items?_expand=status");
   }
@@ -20,7 +21,13 @@ export class ItemService {
   }
 
   getItemsByListId(listId: number): Observable<Item[]> {
-    return this.httpClient.get<Item[]>("http://localhost:3000/items?listId="+ listId +"&_expand=status&_sort=order&_order=asc");
+    return this.httpClient.get<Item[]>("http://localhost:3000/items?listId="+ listId +"&_expand=status&_sort=date&_order=asc");
+  }
+  getItemsByListIdStatusAcs(listId: number): Observable<Item[]> {
+    return this.httpClient.get<Item[]>("http://localhost:3000/items?listId="+ listId +"&_expand=status&_sort=statusId&_order=asc");
+  }
+  getItemsByListIdStatusDesc(listId: number): Observable<Item[]> {
+    return this.httpClient.get<Item[]>("http://localhost:3000/items?listId="+ listId +"&_expand=status&_sort=statusId&_order=desc");
   }
 
   postItem(item: Item): Observable<Item> {

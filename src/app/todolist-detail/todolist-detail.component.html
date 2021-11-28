@@ -6,7 +6,6 @@
 <table class="table table-striped m-0" style="background-color: white;">
   <thead [style.background]="todolist.category">
     <tr>
-      <th scope="col"></th>
       <th scope="col">Status</th>
       <th scope="col">Name</th>
       <th scope="col">Description</th>
@@ -16,13 +15,12 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of items">
-      <td><i class="fas fa-ellipsis-v"></i></td>
       <ng-container *ngFor="let status of statuses">
       <td *ngIf="status.id == item.statusId">{{status.name}}</td>
     </ng-container>
       <td>{{item.title}}</td>
       <td>{{item.description}}</td>
-      <td>{{item.date | date:'short'}}</td>
+      <td>{{item.date | date:'dd-MM-yyyy HH:mm'}}</td>
       <td>
         <button type="button" class="btn btn-success" (click)="edit(item.id)"><i class="fas fa-edit"></i></button>
         <button type="button" class="btn btn-danger" (click)="delete(item.id)"><i class="far fa-trash-alt"></i></button>
