@@ -1,4 +1,4 @@
-<div class="card m-3 text-center " style="width: 100%;" (click)="detail(todolist.id)">
+<div class="card m-3 text-center " style="width: 100%;">
   <div class="card-header font-weight-bold row justify-content-between m-0" [style.background]="todolist.category">
        <div>
           {{todolist.name}}
@@ -9,6 +9,7 @@
       </div>
   </div>
   <ul class="list-group list-group-flush">
+    <li class="list-group-item details" (click)="detail(todolist.id)">Go to details</li>
     <li class="list-group-item" *ngFor="let item of todolist.items" >{{item.title}}</li>
   </ul>
 </div>

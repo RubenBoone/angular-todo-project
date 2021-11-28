@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "School assignments",
-      "category": "#e2b512",
+      "category": "#2fd11a",
       "items": [
         {
           "id": 1,
@@ -11,7 +11,7 @@
           "title": "Cisco assignment",
           "description": "Chapter test 2",
           "date": "2021-10-30T22:00:00",
-          "statusId": "2",
+          "statusId": "4",
           "order": 1
         },
         {
@@ -22,76 +22,42 @@
           "date": "2021-10-24T22:00:00",
           "statusId": "4",
           "order": 2
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Chores",
-      "category": "#073ddf",
-      "items": [
+        },
         {
-          "id": 2,
-          "listId": 2,
-          "title": "Cleaning",
-          "description": "The windows need some cleaning",
-          "date": "2021-10-26T22:00:00",
-          "statusId": 1,
-          "order": 1
+          "id": 6,
+          "listId": 1,
+          "title": "Angular Todo Project",
+          "description": "Create a todo application",
+          "date": "2021-11-28T23:59",
+          "statusId": "3",
+          "order": 0
         }
       ]
     },
     {
-      "id": 3,
-      "name": "Mobile Development Project",
-      "category": "#b313c9",
+      "id": 5,
+      "name": "angular todo project",
+      "category": "#c51b87",
       "items": []
     }
   ],
   "items": [
     {
-      "id": 1,
+      "id": 6,
       "listId": 1,
-      "title": "Cisco assignment",
-      "description": "Chapter test 2",
-      "date": "2021-10-30T22:00:00",
-      "statusId": "2",
-      "order": 1
-    },
-    {
-      "id": 2,
-      "listId": 2,
-      "title": "Cleaning",
-      "description": "The windows need some cleaning",
-      "date": "2021-10-26T22:00:00",
-      "statusId": 1,
-      "order": 1
-    },
-    {
-      "id": 3,
-      "listId": 1,
-      "title": "Mobile Development",
-      "description": "Deadline to upload project description and team",
-      "date": "2021-10-24T22:00:00",
-      "statusId": "4",
-      "order": 2
-    },
-    {
-      "id": 4,
-      "listId": 3,
-      "title": "Create cards",
-      "description": "Create the cars for scanning and shwoing the 3D models",
-      "date": "2021-10-30T16:00",
+      "title": "Angular Todo Project",
+      "description": "Create a todo application",
+      "date": "2021-11-28T23:59",
       "statusId": "4",
       "order": 0
     },
     {
-      "id": 5,
-      "listId": 3,
+      "id": 7,
+      "listId": 5,
       "title": "Upload Project",
-      "description": "uload the project to canvs",
-      "date": "2021-10-30T20:00",
-      "statusId": "4",
+      "description": "Upload the todo project to canvas",
+      "date": "2021-11-28T23:59",
+      "statusId": "3",
       "order": 0
     }
   ],

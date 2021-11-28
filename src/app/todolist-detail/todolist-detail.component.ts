@@ -76,12 +76,6 @@ export class TodolistDetailComponent implements OnInit {
   getItems(){
     this.items$ = this.itemService.getItemsByListId(this.todolist.id).subscribe(result => this.items = result)
   }
-  getItemsAsc(){
-    this.items$ = this.itemService.getItemsByListIdStatusAcs(this.todolist.id).subscribe(result => this.items = result)
-  }
-  getItemsDesc(){
-    this.items$ = this.itemService.getItemsByListIdStatusDesc(this.todolist.id).subscribe(result => this.items = result)
-  }
 
   getStatuses(){
     this.statuses$ = this.statusService.getStatuses().subscribe(result => this.statuses = result)
